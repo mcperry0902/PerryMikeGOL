@@ -180,6 +180,11 @@ namespace PerryMikeGOL
                         scratchPad[i, j] = true;
                         livingCellsCount++;
                     }
+                    else if (universe[i,j] && (neighborCountArray[i,j] == 2 || neighborCountArray[i,j] == 3))
+                    {
+                        scratchPad[i, j] = true;
+                        livingCellsCount++;
+                    }
                     else if (universe[i, j] == true)
                     {
                         livingCellsCount++;
